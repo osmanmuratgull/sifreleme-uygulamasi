@@ -16,3 +16,4 @@ Bu proje, kullanıcıların metinleri şifrelemesine ve deşifre etmesine olanak
 
 - Tarayıcı (Chrome, Firefox, Safari, vb.)
 - Internet Bağlantısı (CryptoJS kütüphanesi çevrimiçi olarak yüklendiği için)
+- CryptoJS kütüphanesini <code>npm install crypto-js</code> ile indirebilirsiniz.
