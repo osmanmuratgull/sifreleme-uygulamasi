@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifreleme Uygulaması</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Şifreleme Uygulaması</h1>
+        
+        <div class="encryption-section">
+            <h2>Metni Şifrele</h2>
+            <label for="encryption-algorithm">Şifreleme Algoritması:</label>
+            <select id="encryption-algorithm">
+                <option value="AES">AES</option>
+                <option value="DES">DES</option>
+                <option value="TripleDES">TripleDES</option>
+                <option value="Rabbit">Rabbit</option>
+            </select>
+            <input type="text" id="encrypt-text" placeholder="Metni girin">
+            <input type="text" id="username" placeholder="Kullanıcı Adı">
+            <input type="password" id="password" placeholder="Şifre">
+            <button id="encrypt-button">Şifrele</button>
+        </div>
+        
+        <div class="decryption-section">
+            <h2>Şifreli Metni Deşifre Et</h2>
+            <label for="decryption-algorithm">Şifreleme Algoritması:</label>
+            <select id="decryption-algorithm">
+                <option value="AES">AES</option>
+                <option value="DES">DES</option>
+                <option value="TripleDES">TripleDES</option>
+                <option value="Rabbit">Rabbit</option>
+            </select>
+            <input type="text" id="decrypt-text" placeholder="Şifreli metni girin">
+            <input type="text" id="decrypt-username" placeholder="Kullanıcı Adı">
+            <input type="password" id="decrypt-password" placeholder="Şifre">
+            <button id="decrypt-button">Deşifre Et</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Çıktı</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
