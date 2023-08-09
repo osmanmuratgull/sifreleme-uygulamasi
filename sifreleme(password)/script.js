@@ -1,28 +1,30 @@
+// @osmanmuratgull
+
 document.addEventListener("DOMContentLoaded", function () {
-    const encryptText = document.getElementById("encrypt-text");
-    const encryptButton = document.getElementById("encrypt-button");
-    const encryptionAlgorithm = document.getElementById("encryption-algorithm");
-    const usernameInput = document.getElementById("username");
-    const passwordInput = document.getElementById("password");
+    var encryptText = document.getElementById("encrypt-text");
+    var encryptButton = document.getElementById("encrypt-button");
+    var encryptionAlgorithm = document.getElementById("encryption-algorithm");
+    var usernameInput = document.getElementById("username");
+    var passwordInput = document.getElementById("password");
 
-    const decryptText = document.getElementById("decrypt-text");
-    const decryptButton = document.getElementById("decrypt-button");
-    const decryptionAlgorithm = document.getElementById("decryption-algorithm");
-    const decryptUsername = document.getElementById("decrypt-username");
-    const decryptPassword = document.getElementById("decrypt-password");
+    var decryptText = document.getElementById("decrypt-text");
+    var decryptButton = document.getElementById("decrypt-button");
+    var decryptionAlgorithm = document.getElementById("decryption-algorithm");
+    var decryptUsername = document.getElementById("decrypt-username");
+    var decryptPassword = document.getElementById("decrypt-password");
 
-    const outputDiv = document.getElementById("output");
-    const recordList = document.getElementById("record-list");
-    const showRecordsButton = document.getElementById("show-records-button");
+    var outputDiv = document.getElementById("output");
+    var recordList = document.getElementById("record-list");
+    var showRecordsButton = document.getElementById("show-records-button");
 
-    const validUsername = "kullanıcı"; // Gerçek kullanıcı adınızı buraya yazın
-    const validPassword = "123"; // Gerçek şifrenizi buraya yazın
+    var validUsername = "kullanıcı"; // Gerçek kullanıcı adınızı buraya yazın
+    var validPassword = "123"; // Gerçek şifrenizi buraya yazın
 
     encryptButton.addEventListener("click", function () {
-        const text = encryptText.value;
-        const algorithm = encryptionAlgorithm.value;
-        const username = usernameInput.value;
-        const password = passwordInput.value;
+        var text = encryptText.value;
+        var algorithm = encryptionAlgorithm.value;
+        var username = usernameInput.value;
+        var password = passwordInput.value;
 
         if (isValidInput(text) && isValidCredentials(username, password)) {
             let encrypted = "";
@@ -51,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     decryptButton.addEventListener("click", function () {
-        const encryptedText = decryptText.value;
-        const algorithm = decryptionAlgorithm.value;
-        const username = decryptUsername.value;
-        const password = decryptPassword.value;
+        var encryptedText = decryptText.value;
+        var algorithm = decryptionAlgorithm.value;
+        var username = decryptUsername.value;
+        var password = decryptPassword.value;
 
         if (isValidInput(encryptedText) && isValidCredentials(username, password)) {
             let decrypted = "";
@@ -90,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
             encryptedData = JSON.parse(encryptedData);
 
             encryptedData.forEach(function (encryptedText, index) {
-                const recordItem = document.createElement("div");
+                var recordItem = document.createElement("div");
                 recordItem.className = "record-item";
                 recordItem.innerHTML = `<strong>Kayıt ${index + 1}:</strong> ${encryptedText}`;
                 recordList.appendChild(recordItem);
